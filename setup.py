@@ -49,6 +49,14 @@ sources = ['psutil/_psutil_common.c']
 if POSIX:
     sources.append('psutil/_psutil_posix.c')
 
+packages = ['psutil']
+if sys.version_info[:2] != (2, 6):
+    packages.append('psutil.tests')
+else:
+    warnings.warn(
+        "Python 2.6 support is deprecated and unit tests won't run",
+        DeprecationWarning)
+
 
 def get_version():
     INIT = os.path.join(HERE, 'psutil/__init__.py')
@@ -259,7 +267,7 @@ def main():
         url='https://github.com/giampaolo/psutil',
         platforms='Platform Independent',
         license='BSD',
-        packages=['psutil', 'psutil.tests'],
+        packages=packages,
         ext_modules=extensions,
         test_suite="psutil.tests.get_suite",
         tests_require=['ipaddress', 'mock', 'unittest2'],

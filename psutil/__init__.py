@@ -21,6 +21,7 @@ import subprocess
 import sys
 import time
 import traceback
+import warnings
 try:
     import pwd
 except ImportError:
@@ -221,6 +222,12 @@ if (int(__version__.replace('.', '')) !=
                 "the existing psutil install directory"))
     msg += " or clean the virtual env somehow, then reinstall"
     raise ImportError(msg)
+
+
+if sys.version_info[:2] == (2, 6):
+    warnings.warn(
+        "Python 2.6 support is deprecated and unit tests won't run",
+        DeprecationWarning)
 
 
 # =====================================================================
