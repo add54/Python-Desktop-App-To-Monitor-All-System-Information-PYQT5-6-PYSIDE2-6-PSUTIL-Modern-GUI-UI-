@@ -5,6 +5,8 @@ set -x
 
 PYVER=`python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))'`
 
+python -V
+
 # setup OSX
 if [[ "$(uname -s)" == 'Darwin' ]]; then
     if which pyenv > /dev/null; then
@@ -17,8 +19,10 @@ fi
 python setup.py build
 python setup.py develop
 
-# run tests (with coverage)
-if [[ $PYVER == '2.7' ]] && [[ "$(uname -s)" != 'Darwin' ]]; then
+# run tests
+if [[ $PYVER == '2.6' ]]; then
+    python -c "import psutil"
+else if [[ $PYVER == '2.7' ]] && [[ "$(uname -s)" != 'Darwin' ]]; then
     coverage run psutil/tests/__main__.py
 else
     python psutil/tests/__main__.py
