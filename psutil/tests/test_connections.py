@@ -26,7 +26,6 @@ from psutil import SUNOS
 from psutil import WINDOWS
 from psutil._common import pconn
 from psutil._common import supports_ipv6
-from psutil._compat import nested
 from psutil._compat import PY3
 from psutil.tests import AF_UNIX
 from psutil.tests import bind_socket
@@ -207,7 +206,7 @@ class TestConnectedSocketPairs(Base, unittest.TestCase):
         addr = ("127.0.0.1", get_free_port())
         assert not thisproc.connections(kind='tcp4')
         server, client = tcp_socketpair(AF_INET, addr=addr)
-        with nested(closing(server), closing(client)):
+        with closing(server), closing(client):
             cons = thisproc.connections(kind='tcp4')
             self.assertEqual(len(cons), 2)
             self.assertEqual(cons[0].status, psutil.CONN_ESTABLISHED)
@@ -223,7 +222,7 @@ class TestConnectedSocketPairs(Base, unittest.TestCase):
     def test_unix(self):
         with unix_socket_path() as name:
             server, client = unix_socketpair(name)
-            with nested(closing(server), closing(client)):
+            with closing(server), closing(client):
                 cons = thisproc.connections(kind='unix')
                 assert not (cons[0].laddr and cons[0].raddr)
                 assert not (cons[1].laddr and cons[1].raddr)
