@@ -20,6 +20,7 @@ import pickle
 import socket
 import stat
 import sys
+import unittest
 
 from psutil import LINUX
 from psutil import POSIX
@@ -57,7 +58,6 @@ from psutil.tests import tcp_socketpair
 from psutil.tests import TESTFN
 from psutil.tests import TOX
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 from psutil.tests import unix_socket_path
 from psutil.tests import unix_socketpair
 from psutil.tests import wait_for_file

@@ -53,6 +53,7 @@ For a detailed explanation of how psutil handles unicode see:
 """
 
 import os
+import unittest
 from contextlib import closing
 
 from psutil import BSD
@@ -79,7 +80,6 @@ from psutil.tests import TESTFILE_PREFIX
 from psutil.tests import TESTFN
 from psutil.tests import TESTFN_UNICODE
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 from psutil.tests import unix_socket_path
 import psutil
 import psutil.tests

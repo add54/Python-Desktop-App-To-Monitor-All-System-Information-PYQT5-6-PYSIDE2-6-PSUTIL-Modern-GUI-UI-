@@ -14,7 +14,7 @@ DEPS = \
 	flake8 \
 	futures \
 	ipaddress \
-	mock==1.0.1 \
+	mock \
 	pep8 \
 	perf \
 	pyflakes \
@@ -22,7 +22,6 @@ DEPS = \
 	setuptools \
 	sphinx \
 	twine \
-	unittest2 \
 	requests
 
 # In not in a virtualenv, add --user options for install commands.

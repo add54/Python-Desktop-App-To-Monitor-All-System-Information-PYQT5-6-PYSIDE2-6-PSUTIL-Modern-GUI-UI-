@@ -14,6 +14,7 @@ import datetime
 import os
 import re
 import time
+import unittest
 
 import psutil
 from psutil import BSD
@@ -26,7 +27,6 @@ from psutil.tests import reap_children
 from psutil.tests import retry_before_failing
 from psutil.tests import run_test_module_by_name
 from psutil.tests import sh
-from psutil.tests import unittest
 from psutil.tests import which
 
 

@@ -21,6 +21,7 @@ import struct
 import tempfile
 import textwrap
 import time
+import unittest
 import warnings
 
 import psutil
@@ -44,7 +45,6 @@ from psutil.tests import skip_on_not_implemented
 from psutil.tests import TESTFN
 from psutil.tests import ThreadTask
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 from psutil.tests import which
 
 

@@ -270,7 +270,7 @@ def main():
         packages=packages,
         ext_modules=extensions,
         test_suite="psutil.tests.get_suite",
-        tests_require=['ipaddress', 'mock', 'unittest2'],
+        tests_require=['ipaddress', 'mock'],
         zip_safe=False,   # http://stackoverflow.com/questions/19548957
         # see: python setup.py register --list-classifiers
         classifiers=[

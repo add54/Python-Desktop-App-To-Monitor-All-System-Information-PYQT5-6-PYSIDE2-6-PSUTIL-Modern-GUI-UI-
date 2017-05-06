@@ -19,6 +19,7 @@ import gc
 import os
 import threading
 import time
+import unittest
 
 import psutil
 import psutil._common
@@ -46,7 +47,6 @@ from psutil.tests import run_test_module_by_name
 from psutil.tests import safe_rmpath
 from psutil.tests import TESTFN
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 
 
 LOOPS = 1000

@@ -40,7 +40,7 @@ Makefile
 Some useful make commands::
 
   $ make install        # install
-  $ make setup-dev-env  # install useful dev libs (pyflakes, unittest2, etc.)
+  $ make setup-dev-env  # install useful dev libs (pyflakes, mock, etc.)
   $ make test           # run unit tests
   $ make test-memleaks  # run memory leak tests
   $ make coverage       # run test coverage

@@ -16,12 +16,12 @@ import os
 import ssl
 import sys
 import tempfile
+import unittest
 try:
     from urllib.request import urlopen  # py3
 except ImportError:
     from urllib2 import urlopen
 
-from psutil.tests import unittest
 from psutil.tests import VERBOSITY
 
 

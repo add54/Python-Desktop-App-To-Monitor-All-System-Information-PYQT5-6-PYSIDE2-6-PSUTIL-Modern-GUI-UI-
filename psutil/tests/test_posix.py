@@ -13,6 +13,7 @@ import os
 import subprocess
 import sys
 import time
+import unittest
 
 import psutil
 from psutil import BSD
@@ -34,7 +35,6 @@ from psutil.tests import run_test_module_by_name
 from psutil.tests import sh
 from psutil.tests import skip_on_access_denied
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 from psutil.tests import wait_for_pid
 
 

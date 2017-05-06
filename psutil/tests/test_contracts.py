@@ -14,6 +14,7 @@ import os
 import stat
 import time
 import traceback
+import unittest
 from contextlib import closing
 
 from psutil import BSD
@@ -38,7 +39,6 @@ from psutil.tests import run_test_module_by_name
 from psutil.tests import safe_rmpath
 from psutil.tests import skip_on_access_denied
 from psutil.tests import TESTFN
-from psutil.tests import unittest
 from psutil.tests import unix_socket_path
 from psutil.tests import VALID_PROC_STATUSES
 from psutil.tests import warn

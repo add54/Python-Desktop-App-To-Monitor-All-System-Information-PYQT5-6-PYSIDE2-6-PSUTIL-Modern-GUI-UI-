@@ -20,6 +20,7 @@ import tempfile
 import textwrap
 import time
 import types
+import unittest
 
 import psutil
 
@@ -65,7 +66,6 @@ from psutil.tests import TESTFN
 from psutil.tests import ThreadTask
 from psutil.tests import TOX
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 from psutil.tests import wait_for_pid
 from psutil.tests import WIN_VISTA
 

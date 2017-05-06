@@ -17,6 +17,7 @@ import socket
 import sys
 import tempfile
 import time
+import unittest
 
 import psutil
 from psutil import BSD
@@ -48,7 +49,6 @@ from psutil.tests import safe_rmpath
 from psutil.tests import TESTFN
 from psutil.tests import TESTFN_UNICODE
 from psutil.tests import TRAVIS
-from psutil.tests import unittest
 
 
 # ===================================================================
