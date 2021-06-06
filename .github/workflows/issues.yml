@@ -1,5 +1,6 @@
 # Fired by Github Actions every time an issue, PR or comment is created.
 name: issues
+if: always()
 on:
   issues:
     types: [opened]
