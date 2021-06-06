@@ -18,6 +18,7 @@
 
 on: [push]
 name: build
+if: always()
 jobs:
   linux-macos-win:
     name: ${{ matrix.os }}
