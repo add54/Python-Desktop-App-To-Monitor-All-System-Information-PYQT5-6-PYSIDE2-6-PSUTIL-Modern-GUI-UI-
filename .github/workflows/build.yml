@@ -21,7 +21,7 @@ on: [push, pull_request]
 name: build
 jobs:
   linux-macos-win:
-    name: ${{ matrix.os }}
+    name: ${{ matrix.os }} ${{ matrix.python-version }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30
     strategy:
